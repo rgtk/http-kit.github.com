@@ -74,7 +74,9 @@ lein run # start a server in :8080, hot code reload
 (ns clj_web.main
   (:use [org.httpkit.server :only [run-server]])
   (:require [ring.middleware.reload :as reload]
-            [compojure.handler :refer [site]]
+            [compojure.handler :refer [site]
+            [compjure.route :as route]
+
             [compojure.core :refer [defroutes GET POST]]))
 
 (defroutes all-routes
